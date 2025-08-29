@@ -10,8 +10,19 @@
     --brand:#155EEF;
     --ok:#16a34a;
     --warn:#f59e0b;
+    --nav-h: 64px;
   }
+  /* animação de entrada */
+  header, section, .ct, .ir-roadmap, .dataviz, .impact {
+    scroll-margin-top: calc(var(--nav-h, 64px) + 12px);
+  }
+  
+  /* (opcional) deixa as revelações mais lentas */
+  .reveal{ opacity:0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  
   *{box-sizing:border-box}
+  html{ scroll-behavior: auto; }
   html,body{margin:0}
   body{
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
