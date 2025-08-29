@@ -429,8 +429,72 @@
       © 2025 NHS RTT Optimization Project by Janaina Vicentin. All rights reserved.
     </div>
   </footer>
+  <script>
+    (() => {
+      // Pega a altura real da navbar e joga na CSS var (se precisar)
+      const NAV = document.querySelector('.nav');
+      const NAV_H = NAV ? NAV.offsetHeight : 64;
+      document.documentElement.style.setProperty('--nav-h', NAV_H + 'px');
+    
+      // Easing suave
+      const easeInOutQuad = t => (t < 0.5 ? 2*t*t : -1 + (4 - 2*t) * t);
+    
+      function smoothScrollTo(yTarget, duration = 1600) { // 1600ms = mais lento
+        const startY = window.pageYOffset;
+        const startTime = performance.now();
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const destY = Math.min(yTarget, maxScroll);
+    
+        function frame(now){
+          const elapsed = now - startTime;
+          const t = Math.min(1, elapsed / duration);
+          const eased = easeInOutQuad(t);
+          window.scrollTo(0, startY + (destY - startY) * eased);
+          if (elapsed < duration) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+    
+      // Intercepta TODOS os anchors internos (#algo)
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const hash = a.getAttribute('href');
+          const id = hash.slice(1);
+          const target = document.getElementById(id);
+          if (!target) return;
+    
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.pageYOffset - NAV_H - 8;
+          smoothScrollTo(y, 1600);                // ajuste a duração se quiser
+          history.pushState(null, '', hash);      // atualiza a URL sem “pular”
+        });
+      });
+    })();
+    </script>
+    
   
-
+  <script>
+    (() => {
+      const targets = document.querySelectorAll(
+        '.ov-card, .i-card, .step, .viz-card, .impact-card, .ct-card, .ir-step-card'
+      );
+      if (!targets.length || !('IntersectionObserver' in window)) return;
+    
+      targets.forEach(el => el.classList.add('reveal'));
+    
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+    
+      targets.forEach(el => io.observe(el));
+    })();
+    </script>
+    
   <script>
     (() => {
       // Lightbox (uma única instância)
@@ -963,6 +1027,7 @@ new Chart(document.getElementById('chartHotspots'), {
       });
     })();
     </script>
+    
     
     <script>
         (() => {
