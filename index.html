@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NHS RTT Optimization – Data-Driven Insights for Excellence</title>
+  <meta name="description" content="Comprehensive analysis of NHS RTT waiting times with actionable insights, interactive charts, and a 5-step action plan." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Chart.js + Zoom plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.umd.min.js"></script>
+
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script defer src="flow-animate.js"></script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container wrap">
+      <div class="brand-wrap">
+        <span class="brand-nhs">NHS</span>
+        <span class="brand-name">RTT: Optimization</span>
+      </div>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#findings">Key Findings</a></li>
+        <li><a href="#action">Action Plan</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#viz">Data Visualization</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div id="hero-bg" class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <h1>Transforming NHS Operations</h1>
+      <p class="lead">Data-Driven Insights for RTT Excellence</p>
+      <a class="cta" href="#findings">Explore the Analysis</a>
+
+      <div class="kpis" style="margin-top:26px">
+        <div class="kpi"><strong>123M+</strong><span>Patient Pathways Improved</span></div>
+        <div class="kpi"><strong>35.8%</strong><span>Current Over 18 Weeks</span></div>
+        <div class="kpi"><strong>&lt;25%</strong><span>Target After Implementation</span></div>
+        <div class="kpi"><strong>+71%</strong><span>Efficiency Improvement</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <div class="container">
+      <h2>Project Overview</h2>
+      <p class="muted">Comprehensive analysis of NHS Referral to Treatment (RTT) waiting times across England.</p>
+  
+      <div class="overview-grid">
+        <article class="ov-card ov-blue">
+          <h3>Enterprise-Scale Analysis</h3>
+          <ul class="ov-list">
+            <li><strong>92,952</strong> records</li>
+            <li><strong>344 million</strong> patient pathways</li>
+            <li><strong>170</strong> NHS Trusts • <strong>24</strong> months</li>
+          </ul>
+        </article>
+      
+        <article class="ov-card ov-amber">
+          <h3>Current Challenge</h3>
+          <p><strong>35.8%</strong> of NHS patients wait longer than the 18-week RTT standard, affecting millions annually.</p>
+        </article>
+      
+        <article class="ov-card ov-green">
+          <h3>Analytical Approach</h3>
+          <p>
+            Multi-method framework combining <strong>SQL</strong> analysis,
+            <strong>Python</strong> statistical modeling, and
+            <strong>interactive visualization</strong> to deliver actionable insights.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- FINDINGS -->
+  <section id="findings" class="insights">
+    <div class="container">
+      <h2 class="insights-title">Revolutionary Insights</h2>
+      <p class="insights-sub">Data-driven discoveries that challenge conventional wisdom and provide new strategic directions.</p>
+  
+      <div class="insight-grid">
+        <!-- Card 1 -->
+        <article class="i-card">
+          <figure class="i-media">
+            <picture>
+              <source srcset="assets/trust-size@3x.png 2x, assets/trust-size@3x.png 3x">
+              <img src="assets/trust-size@3x.png" alt="Trust Size Paradox charts" loading="lazy">
+            </picture>
+          </figure>
+          <h3>The Trust Size Paradox</h3>
+          <p>Small NHS Trusts outperform Very Large Trusts by <strong>71%</strong> efficiency margin, challenging conventional wisdom about economies of scale in healthcare.</p>
+          <div class="i-chips">
+            <span class="chip chip-ok">Small Trusts: 17.6%</span>
+            <span class="chip chip-warn">Very Large Trusts: 39.9%</span>
+          </div>
+        </article>
+  
+        <!-- Card 2 -->
+        <article class="i-card">
+          <figure class="i-media">
+            <picture>
+              <source srcset="assets/specialty-hotspots@3x.png 2x, assets/specialty-hotspots@3x.png 3x">
+              <img src="assets/specialty-hotspots@3x.png" alt="Specialty hotspots bar chart" loading="lazy">
+            </picture>
+          </figure>
+          <h3>Critical Specialty Hotspots</h3>
+          <p>Identified 5 specialty areas requiring immediate resource allocation, affecting over <strong>64&nbsp;million</strong> patient pathways annually.</p>
+          <div class="i-chips">
+            <span class="chip chip-danger">Oral Surgery: 54.8%</span>
+            <span class="chip chip-danger">Dermatology: 49.7%</span>
+          </div>
+        </article>
+  
+        <!-- Card 3 -->
+        <article class="i-card">
+          <figure class="i-media">
+            <picture>
+              <source srcset="assets/seasonal-pattern@3x.png 2x, assets/seasonal-pattern@3x.png 3x">
+              <img src="assets/seasonal-pattern@3x.png" alt="Seasonality line chart" loading="lazy">
+            </picture>
+          </figure>
+          <h3>Seasonal Intelligence</h3>
+          <p>Predictable seasonal patterns enable proactive capacity planning, with a <strong>1.9 percentage-point</strong> variation between peak (December) and optimal (May) periods.</p>
+          <div class="i-chips">
+            <span class="chip chip-danger">December: 36.7%</span>
+            <span class="chip chip-info">May: 34.8%</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+<!-- ACTION PLAN -->
+<section id="action" class="action">
+    <div class="container">
+      <h2 class="action-title">5-Step Action Plan</h2>
+      <p class="action-sub">Comprehensive transformation framework for NHS leadership.</p>
+  
+      <ol class="action-steps">
+        <!-- 1 -->
+        <li class="step">
+          <span class="progress" aria-hidden="true"></span>
+          <div class="badge" aria-hidden="true">1</div>
+          <article class="step-card">
+            <h3>Strategic Patient Redistribution</h3>
+            <p>Leverage small Trusts as capacity alternatives for overloaded large Trusts within 5–10km radius. This approach challenges centralized models and utilizes the superior efficiency of smaller units.</p>
+          </article>
+        </li>
+  
+        <!-- 2 -->
+        <li class="step">
+          <span class="progress" aria-hidden="true"></span>
+          <div class="badge" aria-hidden="true">2</div>
+          <article class="step-card">
+            <h3>Crisis Trust Emergency Intervention</h3>
+            <p>Target 17 worst-performing Trusts (&gt;50% &gt;18 weeks) via weekend/evening clinics, staff redeployment, and buddying with high performers to share best practices.</p>
+          </article>
+        </li>
+  
+        <!-- 3 -->
+        <li class="step">
+          <span class="progress" aria-hidden="true"></span>
+          <div class="badge" aria-hidden="true">3</div>
+          <article class="step-card">
+            <h3>Specialty-Focused Resource Allocation</h3>
+            <p>Prioritize Oral Surgery, Dermatology, and Rheumatology affecting ~50M patients. Implement specialty-specific improvement plans with targeted resource allocation.</p>
+          </article>
+        </li>
+  
+        <!-- 4 -->
+        <li class="step">
+          <span class="progress" aria-hidden="true"></span>
+          <div class="badge" aria-hidden="true">4</div>
+          <article class="step-card">
+            <h3>Seasonal Capacity Management</h3>
+            <p>Use May–June for elective catch-up and proactively plan the December–January surge. Replace reactive crisis management with data-driven planning.</p>
+          </article>
+        </li>
+  
+        <!-- 5 -->
+        <li class="step">
+          <span class="progress" aria-hidden="true"></span>
+          <div class="badge" aria-hidden="true">5</div>
+          <article class="step-card">
+            <h3>Predictive Dashboard Implementation</h3>
+            <p>Deploy real-time monitoring systems to anticipate bottlenecks before they impact patient care, enabling proactive decision-making.</p>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+  
+
+
+
+<section id="impact" class="impact">
+  <div class="container impact-grid">
+    <!-- LEFT: descriptive cards (mantidos) -->
+    <div class="impact-left">
+      <h2 class="impact-title">Transformational Impact</h2>
+      <p class="muted">Potential to revolutionize NHS RTT performance and patient care.</p>
+
+      <ul class="impact-cards">
+        <li class="impact-card">
+          <div class="impact-ico">👥</div>
+          <div class="impact-copy">
+            <h4>Patient Outcomes</h4>
+            <p>Improved care for <strong>123+ million</strong> patient pathways annually.</p>
+          </div>
+        </li>
+
+        <li class="impact-card">
+          <div class="impact-ico">📉</div>
+          <div class="impact-copy">
+            <h4>Performance Improvement</h4>
+            <p>Reduction from <strong>35.8%</strong> to <strong>&lt;25%</strong> over 18 weeks nationally.</p>
+          </div>
+        </li>
+
+        <li class="impact-card">
+          <div class="impact-ico">💷</div>
+          <div class="impact-copy">
+            <h4>Financial Efficiency</h4>
+            <p>Billions in operational savings through <strong>71%</strong> efficiency improvement.</p>
+          </div>
+        </li>
+
+        <li class="impact-card">
+          <div class="impact-ico">🔁</div>
+          <div class="impact-copy">
+            <h4>System Sustainability</h4>
+            <p>Optimized capacity utilization across <strong>170</strong> NHS Trusts.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: donut -->
+    <div class="chart-card">
+      <h3 class="chart-title">Patient Pathway Distribution</h3>
+      <div class="chart-wrap">
+        <canvas id="donutImpact" aria-label="Patient pathway distribution donut"></canvas>
+      </div>
+
+      <ul class="chart-legend">
+        <li><span class="dot g"></span> Within 18 Weeks (Current)</li>
+        <li><span class="dot r"></span> Over 18 Weeks (Current)</li>
+        <li data-key="blue"><span class="dot b"></span> Gain (moved into ≤18 weeks)</li>
+      </ul>
+
+      <!-- linha dinâmica do vermelho + nota em inglês -->
+      <p class="muted small" id="redNote"></p>
+      <p class="muted small" id="deltaNote"></p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="ir-roadmap" class="ir-roadmap">
+    <div class="ir-container">
+      <h2 class="ir-title">Implementation Roadmap</h2>
+      <p class="ir-muted">From insight to impact — a pragmatic plan to reach <strong>&lt;25%</strong> over-18-weeks within 12 months.</p>
+  
+      <div class="ir-grid">
+        <!-- LEFT: timeline -->
+        <ol class="ir-timeline">
+          <li class="ir-step">
+            <div class="ir-step-badge">1</div>
+            <div class="ir-step-card">
+              <h4>Geographic Mapping</h4>
+              <p>Trust coordinates, patient origin flows, and capacity assessment to identify viable redistribution pairs.</p>
+            </div>
+          </li>
+  
+          <li class="ir-step">
+            <div class="ir-step-badge">2–3</div>
+            <div class="ir-step-card">
+              <h4>Redistribution Modeling</h4>
+              <p>Simulation of patient pathways, impact quantification, and stakeholder alignment on regional pathways.</p>
+            </div>
+          </li>
+  
+          <li class="ir-step">
+            <div class="ir-step-badge">4–6</div>
+            <div class="ir-step-card">
+              <h4>Pilot Implementation</h4>
+              <p>Run 2–3 high-impact Trust pairs; measure outcomes, share best practices, and iterate operating model.</p>
+            </div>
+          </li>
+  
+          <li class="ir-step">
+            <div class="ir-step-badge">7–12</div>
+            <div class="ir-step-card">
+              <h4>National Rollout</h4>
+              <p>Phased scale-up with continuous monitoring, focusing on bottlenecks and seasonal capacity planning.</p>
+            </div>
+          </li>
+        </ol>
+  
+        <!-- RIGHT: chart -->
+        <article class="ir-chart-card">
+          <header class="ir-chart-head">
+            <h3 class="ir-chart-title">Implementation Impact Timeline</h3>
+            <span class="ir-chip ir-chip-info">Projected % Over 18 Weeks</span>
+          </header>
+  
+          <div class="ir-chart-wrap">
+            <canvas id="irRoadmapChart" aria-label="Projected percent over 18 weeks over time"></canvas>
+          </div>
+  
+          <p class="ir-muted ir-small">
+            Projection assumes regional redistribution + targeted specialties; expected reduction of
+            <strong>~10.8 p.p.</strong> by Month 12 (to <strong>&lt;25%</strong>).
+          </p>
+        </article>
+      </div>
+  
+      <p class="ir-tiny ir-muted">
+        Assumptions: 2–3 pilots (Months 4–6), steady workforce capacity (WTE), phased scale-up with seasonal planning.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Data Visualization -->
+<section id="viz" class="dataviz">
+    <div class="container">
+      <h2 class="viz-title">Data Visualization</h2>
+      <p class="viz-sub">Interactive charts and graphs showcasing key analytical findings.</p>
+  
+      <div class="viz-grid">
+        <!-- Trust Size Performance -->
+        <article class="viz-card">
+            <h3>Trust Size Performance</h3>
+            <div class="chart-box">
+              <canvas id="chartTrustSize"></canvas>
+            </div>
+          </article>
+          
+          <article class="viz-card">
+            <h3>Specialty Hotspots</h3>
+            <div class="chart-box">
+              <canvas id="chartHotspots"></canvas>
+            </div>
+          </article>
+          
+          <article class="viz-card">
+            <h3>Seasonal Pattern</h3>
+            <div class="chart-box season">
+              <canvas id="chartSeason"></canvas>
+            </div>
+          </article>
+          
+          <article class="viz-card">
+            <h3>Trust Performance Distribution</h3>
+            <div class="chart-box">
+              <canvas id="chartTier"></canvas>
+            </div>
+          </article>
+          
+      </div>
+    </div>
+  </section>
+  
+
+  
+  <!-- CONTACT -->
+<section id="contact" class="ct">
+    <div class="container ct-wrap">
+      <h2 class="ct-title">Get in Touch</h2>
+      <p class="ct-sub">
+        For more information about this analysis or to discuss implementation.
+      </p>
+  
+      <div class="ct-card">
+        <div class="ct-person">
+          <div class="ct-avatar" aria-hidden="true">JV</div>
+          <div class="ct-id">
+            <div class="ct-name">Janaina Vicentin</div>
+            <div class="ct-role">NHS RTT Optimization Project</div>
+          </div>
+        </div>
+  
+        <div class="ct-actions">
+          <a class="ct-mail" href="mailto:janavicentin@gmail.com">
+            janavicentin@gmail.com
+          </a>
+          <div class="ct-buttons">
+            <button class="ct-copy" type="button" data-copy="janavicentin@gmail.com" aria-label="Copy email">
+              Copy
+            </button>
+            <a class="ct-btn" href="mailto:janavicentin@gmail.com">
+              Send Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="ft">
+    <div class="container ft-wrap">
+      <div class="ft-brand">NHS RTT Optimization</div>
+      <nav class="ft-nav" aria-label="Footer navigation">
+        <a href="#overview">Overview</a>
+        <a href="#findings">Findings</a>
+        <a href="#plan">Action Plan</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="ft-meta">
+      © 2025 NHS RTT Optimization Project by Janaina Vicentin. All rights reserved.
+    </div>
+  </footer>
+  
+
+  <script>
+    (() => {
+      // Lightbox (uma única instância)
+      const lb = document.createElement('div');
+      lb.className = 'lightbox';
+      lb.innerHTML = `
+        <div class="lb-backdrop"></div>
+        <img class="lb-img" alt="">
+      `;
+      document.body.appendChild(lb);
+    
+      const imgBig   = lb.querySelector('.lb-img');
+      const backdrop = lb.querySelector('.lb-backdrop');
+    
+      let openTimer = null;
+    
+      const open = (src, alt='') => {
+        imgBig.src = src;
+        imgBig.alt = alt;
+        lb.classList.add('open');           // ativa o fade-in
+        document.body.style.overflow = 'hidden';
+      };
+    
+      const close = () => {
+        lb.classList.remove('open');        // ativa o fade-out
+        // limpa o src depois do fade para evitar “flash”
+        setTimeout(() => imgBig.removeAttribute('src'), 220);
+        document.body.style.overflow = '';
+      };
+    
+      // Fecha: fundo, ESC, ou quando o mouse sai da imagem grande
+      backdrop.addEventListener('click', close);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+      imgBig.addEventListener('mouseleave', close);
+    
+      // Abre ao passar o mouse nas imagens dos cards (.i-media)
+      document.querySelectorAll('.i-media').forEach(wrapper => {
+        const img = wrapper.querySelector('img');
+    
+        wrapper.addEventListener('mouseenter', () => {
+          clearTimeout(openTimer);
+          openTimer = setTimeout(() => {
+            open(img.currentSrc || img.src, img.alt);
+          }, 120); // pequeno delay evita aberturas acidentais
+        });
+    
+        wrapper.addEventListener('mouseleave', () => {
+          clearTimeout(openTimer); // apenas cancela a abertura pendente
+          // o fechamento é controlado pelo próprio lightbox
+        });
+      });
+    })();
+    </script>
+    
+  <script>
+    // ======= DATA ============================================================
+    const DATA = {
+      trustSize: { labels: ["Small Trusts", "Very Large Trusts"], values: [17.6, 39.9] },
+      specialties: { labels: ["Oral Surgery", "Dermatology"], values: [54.8, 49.7] },
+      seasonal: { labels: ["May", "December"], values: [34.8, 36.7] }
+    };
+
+    // ======= HELPERS =========================================================
+    function toTable(containerId, labels, values, headers = ["Label", "Value"]) {
+      const host = document.getElementById(containerId);
+      host.innerHTML = "";
+      const table = document.createElement("table"); table.className = "table";
+      const thead = document.createElement("thead");
+      const trh = document.createElement("tr");
+      headers.forEach(h => { const th = document.createElement("th"); th.textContent = h; trh.appendChild(th); });
+      thead.appendChild(trh);
+      const tbody = document.createElement("tbody");
+      labels.forEach((l,i) => {
+        const tr = document.createElement("tr");
+        const tdL = document.createElement("td"); tdL.textContent = l; tr.appendChild(tdL);
+        const tdV = document.createElement("td"); tdV.textContent = values[i] + "%"; tr.appendChild(tdV);
+        tbody.appendChild(tr);
+      });
+      table.appendChild(thead); table.appendChild(tbody); host.appendChild(table);
+    }
+    function bindToggleButtons(){
+      document.querySelectorAll("[data-toggle='table']").forEach(btn=>{
+        btn.addEventListener("click",()=>{
+          const target = btn.getAttribute("data-target");
+          const canvas = document.getElementById(target);
+          const tableDiv = document.getElementById("table-" + target);
+          const isHidden = tableDiv.classList.contains("hide");
+          if(isHidden){
+            tableDiv.classList.remove("hide");
+            canvas.parentElement.querySelector("canvas").classList.add("hide");
+            btn.textContent = "View as Chart";
+          }else{
+            tableDiv.classList.add("hide");
+            canvas.parentElement.querySelector("canvas").classList.remove("hide");
+            btn.textContent = "View as Table";
+          }
+        })
+      });
+    }
+    function createBarChart(ctx, labels, values, title){
+      return new Chart(ctx, {
+        type: "bar",
+        data: { labels, datasets: [{ label: title, data: values, borderWidth: 1,
+          backgroundColor: ["#3b82f6","#e11d48","#10b981","#f59e0b","#6366f1"] }]},
+        options: {
+          responsive:true,
+          plugins:{
+            legend:{display:false},
+            tooltip:{mode:"nearest"},
+            zoom:{zoom:{wheel:{enabled:true}, pinch:{enabled:true}, mode:"y"}, pan:{enabled:true, mode:"x"}}
+          },
+          scales:{ y:{ beginAtZero:true, title:{display:true, text:"% over 18 weeks"}} }
+        }
+      });
+    }
+    function createLineChart(ctx, labels, values, title){
+      return new Chart(ctx, {
+        type: "line",
+        data: { labels, datasets: [{ label: title, data: values, borderWidth: 2, fill:false }]},
+        options: {
+          responsive:true,
+          plugins:{
+            legend:{display:false},
+            tooltip:{mode:"nearest"},
+            zoom:{zoom:{wheel:{enabled:true}, pinch:{enabled:true}, mode:"y"}, pan:{enabled:true, mode:"x"}}
+          },
+          scales:{ y:{ beginAtZero:false, title:{display:true, text:"% over 18 weeks"}} }
+        }
+      });
+    }
+    function downloadPng(chart, name){
+      const a = document.createElement("a");
+      a.href = chart.toBase64Image();
+      a.download = name + ".png";
+      a.click();
+    }
+
+    // ======= CHARTS (Findings) ==============================================
+    const chartTrust = createBarChart(
+      document.getElementById("chart-trust-size"), DATA.trustSize.labels, DATA.trustSize.values, "Trust Size Performance"
+    );
+    toTable("table-chart-trust-size", DATA.trustSize.labels, DATA.trustSize.values);
+
+    const chartSpec = createBarChart(
+      document.getElementById("chart-specialty"), DATA.specialties.labels, DATA.specialties.values, "Specialty Hotspots"
+    );
+    toTable("table-chart-specialty", DATA.specialties.labels, DATA.specialties.values);
+
+    const chartSeason = createLineChart(
+      document.getElementById("chart-seasonal"), DATA.seasonal.labels, DATA.seasonal.values, "Seasonal Pattern"
+    );
+    toTable("table-chart-seasonal", DATA.seasonal.labels, DATA.seasonal.values);
+
+    const chartDist = createBarChart(
+      document.getElementById("chart-distribution"), [], [], "Trust Performance Distribution"
+    );
+    document.getElementById("table-chart-distribution").innerHTML = '<div class="muted">No data loaded.</div>';
+
+    document.getElementById("load-distribution").addEventListener("click", ()=>{
+      const input = document.createElement("input"); input.type="file"; input.accept=".csv";
+      input.onchange = (e)=>{
+        const file = e.target.files[0]; if(!file) return;
+        const r = new FileReader();
+        r.onload = ()=>{
+          const text = r.result.trim();
+          const lines = text.split(/\r?\n/);
+          const labels = [], values = [];
+          for(let i=0;i<lines.length;i++){
+            const [name, val] = lines[i].split(",");
+            const num = parseFloat(val);
+            if(name && Number.isFinite(num)){ labels.push(name); values.push(num); }
+          }
+          chartDist.data.labels = labels; chartDist.data.datasets[0].data = values; chartDist.update();
+          toTable("table-chart-distribution", labels, values, ["Trust","% >18w"]);
+        };
+        r.readAsText(file);
+      };
+      input.click();
+    });
+
+    document.querySelectorAll("[data-dl]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const key = btn.getAttribute("data-dl");
+        const map = {
+          "trust-size": chartTrust, "specialty": chartSpec, "seasonal": chartSeason, "distribution": chartDist, "viz-active": null
+        };
+        const ch = map[key]; if(ch) downloadPng(ch, key);
+      });
+    });
+
+    bindToggleButtons();
+
+    // ======= VIZ TABS =======================================================
+    const vizCharts = {
+      trust: createBarChart(document.getElementById("viz-trust-canvas"), DATA.trustSize.labels, DATA.trustSize.values, "Trust Size Performance"),
+      specialty: createBarChart(document.getElementById("viz-specialty-canvas"), DATA.specialties.labels, DATA.specialties.values, "Specialty Hotspots"),
+      seasonal: createLineChart(document.getElementById("viz-seasonal-canvas"), DATA.seasonal.labels, DATA.seasonal.values, "Seasonal Pattern"),
+      dist: createBarChart(document.getElementById("viz-dist-canvas"), [], [], "Trust Performance Distribution")
+    };
+    toTable("table-viz-trust", DATA.trustSize.labels, DATA.trustSize.values);
+    toTable("table-viz-specialty", DATA.specialties.labels, DATA.specialties.values);
+    toTable("table-viz-seasonal", DATA.seasonal.labels, DATA.seasonal.values);
+    document.getElementById("table-viz-dist").innerHTML = '<div class="muted">No data loaded.</div>';
+
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll("#viz-panels > div");
+    function showTab(id){
+      panels.forEach(p => p.classList.add("hide"));
+      document.getElementById(id).classList.remove("hide");
+      tabs.forEach(t => t.setAttribute("aria-selected", String(t.dataset.tabTarget === id)));
+      document.querySelector("[data-toggle='table'][data-target='viz-active']").setAttribute("data-target", "table-" + id.replace("viz-", "") + "-canvas");
+      document.querySelector("[data-dl='viz-active']").onclick = ()=>{
+        const key = id.replace("viz-","");
+        const ch = vizCharts[key === "trust" ? "trust" : key === "specialty" ? "specialty" : key === "seasonal" ? "seasonal" : "dist"];
+        downloadPng(ch, "viz-" + key);
+      };
+    }
+    tabs.forEach(t => t.addEventListener("click", () => showTab(t.dataset.tabTarget)));
+    showTab("viz-trust");
+
+    document.querySelector("[data-toggle='table'][data-target='viz-active']").addEventListener("click", (e)=>{
+      const btn = e.currentTarget;
+      const activePanel = Array.from(panels).find(p=>!p.classList.contains("hide"));
+      const canvas = activePanel.querySelector("canvas");
+      const table = activePanel.querySelector("div[id^='table-']");
+      const hidden = table.classList.contains("hide");
+      if(hidden){ table.classList.remove("hide"); canvas.classList.add("hide"); btn.textContent = "View as Chart";}
+      else{ table.classList.add("hide"); canvas.classList.remove("hide"); btn.textContent = "View as Table";}
+    });
+  </script>
+<script>
+    /* Action Plan: anima entrada de cada passo com IntersectionObserver */
+    (() => {
+      const steps = document.querySelectorAll('.action .step');
+      if (!('IntersectionObserver' in window) || !steps.length) return;
+    
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if (entry.isIntersecting){
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { root:null, threshold:0.35 });
+    
+      steps.forEach((el, i) => {
+        el.style.setProperty('--delay', (i*80)+'ms');
+        io.observe(el);
+      });
+    })();
+    </script>
+
+<script>
+(() => {
+  const values = { within: 64.2, over: 35.8, delta: 10.8 };
+  const to1 = n => n.toFixed(1);
+
+  // --- ESTADO ---
+  let hoverActive = false;      // azul aparece ao passar o mouse (delay)
+  let hoverTimer = null;
+  let forceBlue = null;         // null = segue hover | true = força ON | false = força OFF
+
+  // --- plugin p/ texto central (mantém igual ao seu) ---
+  const centerText = { /* ... deixe o mesmo plugin que já está no seu código ... */ };
+
+  // --- helpers p/ montar dados conforme “showBlue” ---
+  function apply(showBlue){
+    chart.data.datasets[0].data = [
+      values.within,
+      showBlue ? values.delta : 0,
+      showBlue ? (values.over - values.delta) : values.over
+    ];
+    chart.data.datasets[0].backgroundColor = [
+      '#22c55e',
+      showBlue ? '#0ea5e9' : 'rgba(0,0,0,0)',
+      showBlue ? '#f87171' : '#ef4444'
+    ];
+    chart.update();
+    updateRedNote(showBlue);
+  }
+
+  function computeShowBlue(){
+    return (forceBlue !== null) ? forceBlue : hoverActive;
+  }
+
+  function updateRedNote(showBlue){
+    const redNote = document.getElementById('redNote');
+    if (!redNote) return;
+    if (showBlue){
+      redNote.innerHTML =
+        `Over 18 Weeks: <strong>${to1(values.over)}%</strong> → <strong>${to1(values.over - values.delta)}%</strong>`;
+    } else {
+      redNote.innerHTML = `Over 18 Weeks: <strong>${to1(values.over)}%</strong>`;
+    }
+  }
+
+  // --- cria o chart (mantenha suas opções; ajuste data inicial sem azul) ---
+  const ctx = document.getElementById('donutImpact');
+  const chart = new Chart(ctx, {
+    type: 'doughnut',
+    data: { datasets: [{ data: [values.within, 0, values.over], backgroundColor: ['#22c55e','rgba(0,0,0,0)','#ef4444'], borderWidth:0, hoverOffset:2 }] },
+    options: {
+      animation: { duration: 700, easing: 'easeOutQuart' },
+      cutout: '66%',
+      rotation: -90 * Math.PI / 180,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (c) => {
+              const i = c.dataIndex, v = c.parsed;
+              if (i === 0) return `Within 18 Weeks (Current): ${to1(v)}%`;
+              if (i === 1) return `Gain (moved into ≤18 weeks): ${to1(v)} p.p.`;
+              return `Over 18 Weeks (Current): ${to1(v)}%`;
+            }
+          }
+        },
+        centerText: {
+          main: `${to1(values.within)}% → ${to1(values.within + values.delta)}%`,
+          sub: `+${to1(values.delta)} p.p.`
+        }
+      }
+    },
+    plugins: [centerText]
+  });
+
+  // nota delta (fixa)
+  const deltaNote = document.getElementById('deltaNote');
+  if (deltaNote){
+    deltaNote.innerHTML =
+      `Δ <strong>+${to1(values.delta)} p.p.</strong> would move patients into ≤18 weeks ` +
+      `(from <strong>${to1(values.within)}%</strong> to <strong>${to1(values.within + values.delta)}%</strong>), ` +
+      `reducing &gt;18 weeks to <strong>&lt;25%</strong>.`;
+  }
+
+  // estado inicial: sem azul (pra ver o 35.8%)
+  apply(false);
+
+  // --- HOVER com delay (só ativa se NÃO houver força manual) ---
+  ctx.addEventListener('mouseenter', () => {
+    if (forceBlue !== null) return;       // override manual ativo
+    clearTimeout(hoverTimer);
+    hoverTimer = setTimeout(() => { hoverActive = true; apply(computeShowBlue()); }, 500);
+  });
+  ctx.addEventListener('mouseleave', () => {
+    if (forceBlue !== null) return;
+    clearTimeout(hoverTimer);
+    hoverActive = false; apply(computeShowBlue());
+  });
+
+  // --- LEGEND: só o AZUL é clicável (força mostrar/ocultar) ---
+  const blueLi = document.querySelector('.chart-legend li[data-key="blue"]');
+  if (blueLi){
+    blueLi.addEventListener('click', () => {
+      // 3 estados: null (segue hover) → true (força ON) → false (força OFF) → null …
+      if (forceBlue === null) {
+        forceBlue = true;       // força ON
+        blueLi.classList.remove('off');
+      } else if (forceBlue === true) {
+        forceBlue = false;      // força OFF
+        blueLi.classList.add('off');
+      } else {
+        forceBlue = null;       // volta a seguir hover
+        blueLi.classList.remove('off');
+      }
+      apply(computeShowBlue());
+    });
+  }
+})();
+
+    </script>
+
+<script>
+    (() => {
+      const NHS = {
+        green: '#22c55e',
+        red:   '#ef4444',
+        blue:  '#3b82f6',
+        orange:'#f59e0b',
+        gray:  '#94a3b8'
+      };
+    
+      const percentTick = (value) => value + '%';
+    
+      // ---------- 1) Trust Size Performance (Barras) ----------
+      // % patients over 18 weeks: 17.6, 32.5, 38.4, 39.9
+      new Chart(document.getElementById('chartTrustSize'), {
+        type: 'bar',
+        data: {
+          labels: ['Small Trusts', 'Medium Trusts', 'Large Trusts', 'Very Large Trusts'],
+          datasets: [{
+            label: '% Patients Over 18 Weeks',
+            data: [17.6, 32.5, 38.4, 39.9],
+            backgroundColor: [NHS.green, NHS.blue, NHS.orange, NHS.red],
+            borderRadius: 8,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display:false },
+            tooltip: {
+              callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue}%` }
+            }
+          },
+          scales: {
+            x: { grid: { display:false } },
+            y: {
+              beginAtZero: true,
+              grace: '5%',
+              ticks: { callback: percentTick }
+            }
+          },
+          animation: { duration: 900, easing: 'easeOutQuart' }
+        }
+      });
+    
+      // ---------- 2) Specialty Hotspots (Barras Horizontais) ----------
+      // Valores baseados no gráfico já usado (ajuste se quiser)
+      const specLabels = [
+  'Ear Nose and Throat Service',
+  'Oral Surgery Service',
+  'Trauma and Orthopaedic Service',
+  'Neurosurgical Service',
+  'Gynaecology Service',
+  'General Surgery Service',
+  'Plastic Surgery Service',
+  'Neurology Service',
+  'Urology Service',
+  'Total'
+];
+
+const specValues = [47.5, 46.6, 44.0, 43.7, 43.6, 42.7, 41.4, 41.3, 39.6, 37.2];
+
+new Chart(document.getElementById('chartHotspots'), {
+  type: 'bar',
+  data: {
+    labels: specLabels,
+    datasets: [{
+      label: '% Over 18 Weeks',
+      data: specValues,
+      backgroundColor: '#fb7185',
+      borderRadius: 8,
+      borderSkipped: false
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display:false },
+      tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue}%` } }
+    },
+    scales: {
+      x: { ticks: { callback: (v) => v + '%' } },
+      y: { grid: { display:false } }
+    },
+    animation: { duration: 900, easing: 'easeOutQuart' }
+  }
+})
+    
+      // ---------- 3) Seasonal Pattern (Linha / Área) ----------
+      // Meses: Jan..Dec → 36.5, 36.2, 36.0, 35.0, 34.8, 34.8, 35.1, 35.4, 35.7, 35.8, 36.0, 36.7
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const season = [36.5, 36.2, 36.0, 35.0, 34.8, 34.8, 35.1, 35.4, 35.7, 35.8, 36.0, 36.7];
+    
+      // Cria um gradiente sutil para a área
+      const seasonCtx = document.getElementById('chartSeason').getContext('2d');
+      const grad = seasonCtx.createLinearGradient(0, 0, 0, 380);
+      grad.addColorStop(0, 'rgba(59,130,246,0.25)');
+      grad.addColorStop(1, 'rgba(59,130,246,0.05)');
+    
+      new Chart(seasonCtx, {
+        type: 'line',
+        data: {
+          labels: months,
+          datasets: [{
+            label: '% Over 18 Weeks',
+            data: season,
+            borderColor: NHS.blue,
+            backgroundColor: grad,
+            fill: true,
+            pointRadius: 3,
+            pointHoverRadius: 5,
+            tension: 0.28
+          }]
+        },
+        options: {
+          responsive:true,
+          maintainAspectRatio:false,
+          plugins: {
+            legend: { display:false },
+            tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue}%` } }
+          },
+          scales: {
+            x: { grid: { display:false } },
+            y: { ticks: { callback: percentTick }, beginAtZero:false }
+          },
+          animation: { duration: 950, easing: 'easeOutQuart' }
+        }
+      });
+    
+      // ---------- 4) Trust Performance Distribution (Barras) ----------
+      // (Exemplo; ajuste os números reais quando tiver)
+      new Chart(document.getElementById('chartTier'), {
+        type: 'bar',
+        data: {
+          labels: ['Excellent (0–10%)','Good (10–25%)','Concerning (25–50%)','Crisis (50%+)'],
+          datasets: [{
+            label: 'Number of Trusts',
+            data: [24, 52, 78, 17],
+            backgroundColor: ['#10b981', '#3b82f6', '#f59e0b', '#ef4444'],
+            borderRadius: 8,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          responsive:true,
+          maintainAspectRatio:false,
+          plugins: { legend: { display:false } },
+          scales: {
+            x: { grid: { display:false }, ticks: { maxRotation:0, minRotation:0 } },
+            y: { beginAtZero:true }
+          },
+          animation: { duration: 900, easing: 'easeOutQuart' }
+        }
+      });
+    })();
+    </script>
+    
+    <script>
+        (() => {
+          const NHS = { blue:'#1e2a63' };
+        
+          // rótulos e projeção (% >18 semanas) — ajuste livre
+          const labels = ['Month 1','Month 3','Month 6','Month 9','Month 12'];
+          const data   = [35.8, 33.1, 30.0, 27.0, 24.9];
+        
+          const canvas = document.getElementById('irRoadmapChart');
+          if (!canvas) return; // segurança
+        
+          const ctx = canvas.getContext('2d');
+          const grad = ctx.createLinearGradient(0, 0, 0, 260);
+          grad.addColorStop(0, 'rgba(30,42,99,0.22)');
+          grad.addColorStop(1, 'rgba(30,42,99,0.05)');
+        
+          new Chart(ctx, {
+            type:'line',
+            data:{
+              labels,
+              datasets:[{
+                label:'Projected % Over 18 Weeks',
+                data,
+                borderColor:NHS.blue,
+                backgroundColor:grad,
+                pointBackgroundColor:'#fff',
+                pointBorderColor:NHS.blue,
+                pointBorderWidth:2,
+                pointRadius:3,
+                pointHoverRadius:5,
+                fill:true,
+                tension:.28
+              }]
+            },
+            options:{
+              responsive:true,
+              maintainAspectRatio:false,
+              plugins:{
+                legend:{ display:false },
+                tooltip:{ callbacks:{ label:c => `${c.dataset.label}: ${c.formattedValue}%` } }
+              },
+              scales:{
+                x:{ grid:{ display:false } },
+                y:{
+                  beginAtZero:false,
+                  suggestedMin:22,
+                  suggestedMax:36,
+                  ticks:{ callback:v => v + '%' },
+                  grid:{ color:'rgba(30,42,99,0.08)' }
+                }
+              },
+              animation:{ duration:900, easing:'easeOutQuart' }
+            }
+          });
+        })();
+        </script>
+        
+        <script>
+            document.addEventListener('click', (e) => {
+              const btn = e.target.closest('.ct-copy');
+              if(!btn) return;
+              const value = btn.getAttribute('data-copy') || '';
+              navigator.clipboard.writeText(value).then(() => {
+                const original = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = original, 1200);
+              });
+            });
+          </script>
+          
+    
+        
+        
+</body>
+</html>
